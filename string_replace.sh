@@ -1,0 +1,1 @@
+sed '5,$ {/welcome/ s/give/learning/g}' welcome.txt > output.txt
