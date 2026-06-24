@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  nginx:
+    build: .
+
+    container_name: custom-nginx
+
+    ports:
+      - "3000:80"
+
+    volumes:
+      - ./data:/var/opt/nginx
+
+    restart: unless-stopped
