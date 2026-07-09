@@ -1,0 +1,1 @@
+Created namespaces, created pod in specified namespace, deleted namespace
