@@ -16,4 +16,19 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            mail to: "manojmjhere2@gmail.com",
+                 subject: "Build ${currentBuild.currentResult}: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 body: """
+Build Status: ${currentBuild.currentResult}
+
+Job Name: ${env.JOB_NAME}
+Build Number: ${env.BUILD_NUMBER}
+
+Build URL:
+${env.BUILD_URL}
+"""
+        }
+    }
 }
