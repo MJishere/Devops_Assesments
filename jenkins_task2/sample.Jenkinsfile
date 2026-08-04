@@ -12,6 +12,7 @@ pipeline {
             steps {
                 sh "chmod +x ./jenkins_task2/hello.sh"
                 sh "./jenkins_task2/hello.sh"
+                sh "echo Job complete"
             }
         }
     }
